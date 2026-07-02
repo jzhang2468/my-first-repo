@@ -1,106 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>                            
+<html lang="en">                                  
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asian Food Guide</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">                         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Archive · jZhang</title>  
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <nav>
-      <a href="#" class="logo">Asian Food</a>
-      <div class="nav-links">
-        <a href="#dishes">Dishes</a>
-        <a href="#flavors">Flavors</a>
-        <a href="#try">Try This</a>
-      </div>
-    </nav>
 
-    <section class="hero-content">
-      <p class="eyebrow">simple food guide</p>
-      <h1>A small taste tour across Asia</h1>
-      <p>
-        From noodles and rice bowls to dumplings and curries, Asian food is built around
-        balance: warmth, texture, aroma, spice, and comfort.
-      </p>
-      <a class="button" href="#dishes">Explore dishes</a>
-    </section>
-  </header>
 
-  <main>
-    <section id="dishes" class="section">
-      <div class="section-title">
-        <p class="eyebrow">popular dishes</p>
-        <h2>Comfort food with character</h2>
-      </div>
+    <header>
+        <div class="left">                       
+            <div class="institution">Columbia GSAPP</div>  
+            <div class="practice">
+                Computational Design Practices<br> 
+                <span>Project Archive</span>       
+            </div>
+            <div class="subtitle">2026 Coursework Demo</div>
+        </div>
+        <div class="right">                        
+            <a href="#">About</a>
+        </div>
+    </header>
 
-      <div class="cards">
-        <article class="card">
-          <div class="food-emoji">🍜</div>
-          <h3>Ramen</h3>
-          <p>Japanese noodle soup with broth, noodles, toppings, and a soft-boiled egg.</p>
-        </article>
+    <main>
+        <div class="project-meta">2026</div>              
+        <div class="project-title">Building a Website</div>   
+        <div class="project-subtitle">jZhang</div>    
+        <section class="interactive">
+            <div class="section-title">Interactive Demo</div>  
+            <p>Click the button below to see JavaScript in action:</p> 
+            <button id="demoButton">Click Me!</button>
 
-        <article class="card">
-          <div class="food-emoji">🥟</div>
-          <h3>Dumplings</h3>
-          <p>Filled pockets of dough that can be steamed, boiled, pan-fried, or served in soup.</p>
-        </article>
+            <div id="messageDisplay"></div>
+        </section>
+    </main>
 
-        <article class="card">
-          <div class="food-emoji">🍛</div>
-          <h3>Curry</h3>
-          <p>A rich, spiced dish found across Asia, often served with rice or flatbread.</p>
-        </article>
-
-        <article class="card">
-          <div class="food-emoji">🍚</div>
-          <h3>Bibimbap</h3>
-          <p>Korean mixed rice topped with vegetables, egg, sauce, and sometimes meat.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="flavors" class="section split">
-      <div>
-        <p class="eyebrow">flavor notes</p>
-        <h2>What makes it memorable?</h2>
-        <p>
-          Many Asian cuisines use contrast beautifully: hot and cold, soft and crunchy,
-          sweet and salty, fresh herbs and deep broths. A good meal feels composed, like
-          a little edible orchestra.
-        </p>
-      </div>
-
-      <div class="flavor-list">
-        <div><strong>Salty</strong><span>soy sauce, fish sauce, miso</span></div>
-        <div><strong>Spicy</strong><span>chili oil, curry paste, peppercorn</span></div>
-        <div><strong>Fresh</strong><span>cilantro, basil, scallion, lime</span></div>
-        <div><strong>Umami</strong><span>mushroom, seaweed, fermented sauces</span></div>
-      </div>
-    </section>
-
-    <section id="try" class="section try-box">
-      <p class="eyebrow">try this</p>
-      <h2>Pick a mood</h2>
-      <p>Click a button to get a simple dinner idea.</p>
-
-      <div class="buttons">
-        <button data-food="A cozy bowl of miso ramen with scallions and egg.">Cozy</button>
-        <button data-food="Crispy scallion pancakes with a bright dipping sauce.">Snacky</button>
-        <button data-food="Thai green curry with rice and fresh basil.">Spicy</button>
-        <button data-food="Vegetable dumplings with chili oil.">Shareable</button>
-      </div>
-
-      <p id="suggestion">Tonight’s idea will appear here.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Made as a simple website about Asian food.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

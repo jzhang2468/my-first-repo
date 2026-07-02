@@ -1,233 +1,120 @@
-* {
-  box-sizing: border-box;
-}
 
-:root {
-  --bg: #fff8ef;
-  --paper: #ffffff;
-  --text: #241713;
-  --muted: #745f55;
-  --accent: #d4572a;
-  --accent-dark: #9f351a;
-  --line: #ead7c7;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;  
+    background-color: #ffffff;          
+    color: #111;                       
+    margin: 0;                           
+    line-height: 1.6;                  
 }
 
-a {
-  color: inherit;
+header {
+    display: flex;                       
+    justify-content: space-between;     
+    align-items: flex-start;             
+    padding: 20px 40px;                   
+    border-bottom: 1px solid #eee;      
 }
 
-.hero {
-  min-height: 82vh;
-  padding: 24px;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(212, 87, 42, .18), transparent 320px),
-    linear-gradient(135deg, #fff8ef, #fff1df);
+header .institution {
+    font-weight: 700;                   
+    font-size: 18px;
 }
 
-nav {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header .practice {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #555;
 }
 
-.logo {
-  font-weight: 800;
-  text-decoration: none;
+header .practice span {
+    font-weight: 700;
+    color: #111;
 }
 
-.nav-links {
-  display: flex;
-  gap: 22px;
+header .subtitle {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #999;                    
 }
 
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 15px;
+header .right a {
+    color: #111;
+    text-decoration: none;             
+    font-size: 14px;
+}
+header .right a:hover {
+    text-decoration: underline;         
 }
 
-.hero-content {
-  width: min(780px, 100%);
-  margin: 130px auto 0;
-  text-align: center;
+main {
+    max-width: 800px;                   
+    margin: 60px auto;                   
+    padding: 0 20px;                    
 }
 
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+.project-meta {
+    font-size: 14px;
+    color: #999;                        
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  line-height: 1.05;
+.project-title {
+    font-size: 40px;                    
+    font-weight: 700;
+    margin: 8px 0;
 }
 
-h1 {
-  font-size: clamp(46px, 8vw, 88px);
-  letter-spacing: -0.05em;
+.project-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;                 
 }
 
-h2 {
-  font-size: clamp(34px, 5vw, 58px);
-  letter-spacing: -0.04em;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-.hero-content p:not(.eyebrow),
-.section > p,
-.split p,
-.try-box p {
-  color: var(--muted);
-  font-size: 18px;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 13px 20px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.section {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 78px 0;
-}
 
 .section-title {
-  max-width: 680px;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.card {
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: var(--paper);
-  box-shadow: 0 18px 40px rgba(80, 45, 20, .08);
-}
-
-.food-emoji {
-  margin-bottom: 20px;
-  font-size: 44px;
-}
-
-.card p {
-  color: var(--muted);
-}
-
-.split {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.flavor-list {
-  display: grid;
-  gap: 12px;
-}
-
-.flavor-list div {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-}
-
-.flavor-list span {
-  color: var(--muted);
-  text-align: right;
-}
-
-.try-box {
-  text-align: center;
-  padding: 70px 30px;
-  border-radius: 34px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  margin-bottom: 70px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 26px 0;
+    font-weight: 700;
+    text-transform: uppercase;          
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;               
+    border-bottom: 2px solid #111;       
+    display: inline-block;               
+    padding-bottom: 4px;
 }
 
 button {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 12px 18px;
-  background: #fff8ef;
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
+    background-color: #111;              
+    color: white;                      
+    border: none;                       
+    padding: 12px 24px;                 
+    border-radius: 6px;              
+    cursor: pointer;                     
+    font-family: 'Roboto', sans-serif;  
+    font-size: 15px;
+    transition: background-color 0.3s;    
+    margin-top: 10px;
 }
+
 
 button:hover {
-  border-color: var(--accent);
-  color: var(--accent-dark);
+    background-color: #333;             
 }
 
-#suggestion {
-  min-height: 30px;
-  font-weight: 700;
-  color: var(--accent-dark);
+#messageDisplay {
+    margin-top: 20px;                
+    padding: 16px;                      
+    border-left: 4px solid #111;        
+    background-color: #fafafa;         
+    min-height: 24px;                   
+    color: #333;
 }
 
-footer {
-  padding: 34px 20px;
-  text-align: center;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
+
+#messageDisplay.show {
+    animation: fadeIn 0.4s ease;
 }
-
-@media (max-width: 850px) {
-  .cards,
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hero-content {
-    margin-top: 90px;
-  }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); } 
+    to   { opacity: 1; transform: translateY(0); }   
 }

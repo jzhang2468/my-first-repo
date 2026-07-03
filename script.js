@@ -1,26 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const button = document.getElementById('demoButton');
-  const messageArea = document.getElementById('messageDisplay');
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('demoButton');       
+    const messageArea = document.getElementById('messageDisplay'); 
 
-  const labels = [
-    'researcher',
-    'enthusiast',
-    'spectator',
-    'commuter',
-    'newcomer',
-    'onlooker'
-  ];
-
-  button.addEventListener('click', function() {
-    const label = labels[Math.floor(Math.random() * labels.length)];
-    const currentTime = new Date().toLocaleTimeString();
-
-    messageArea.textContent = 'The classifier labels you "' + label + '" at ' + currentTime + '. ImageNet Roulette worked like this: it reduced a whole person to a single category. Crawford and Paglen showed that many of those categories were arbitrary, biased, or harmful.';
-
-    button.textContent = 'Classified';
-
-    setTimeout(function() {
-      button.textContent = 'Classify Me';
-    }, 2000);
-  });
+    let clickCount = 0;
+    button.addEventListener('click', function () {
+        clickCount++;                          
+        console.log('Button was clicked ' + clickCount + ' time(s)');
+        const currentTime = new Date().toLocaleTimeString();
+        const message = 'Hello! You clicked the button ' + clickCount +
+                        ' time(s). Last click at ' + currentTime + '.';
+        messageArea.textContent = message;
+        messageArea.classList.remove('show');
+        void messageArea.offsetWidth;         
+        messageArea.classList.add('show');
+        button.textContent = 'Thanks for clicking!';
+        setTimeout(function () {
+            button.textContent = 'Click Me!';
+        }, 2000);                            
+    });
 });
